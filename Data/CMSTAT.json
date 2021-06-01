@@ -1,0 +1,71 @@
+{
+  "Name": "Comparator Status Register",
+  "fields": [
+    {
+      "Name": "C3EVT",
+      "Position": 18,
+      "Length": 1,
+      "ValueDescription": {
+        "-1": "Shows the current event status of comparator 3 (CM3CON[9])"
+      }
+    },
+    {
+      "Name": "C2EVT",
+      "Position": 17,
+      "Length": 1,
+      "ValueDescription": {
+        "-1": "Shows the current event status of comparator 2 (CM2CON[9])"
+      }
+    },
+    {
+      "Name": "C1EVT",
+      "Position": 16,
+      "Length": 1,
+      "ValueDescription": {
+        "-1": "Shows the current event status of comparator 1 (CM1CON[9])"
+      }
+    },
+    {
+      "Name": "SIDL",
+      "Position": 13,
+      "Length": 1,
+      "ValueDescription": {
+        "0": "Discontinues operation of all comparatorswhen device enters Idle mode",
+        "1": "Continues operation of all enabled comparators in Idle mode"
+      }
+    },
+    {
+      "Name": "CVREFSEL",
+      "Position": 8,
+      "Length": 1,
+      "ValueDescription": {
+        "0": "Internal band gap voltage reference is selected",
+        "1": "External voltage reference from the CVref+ pin is selected"
+      }
+    },
+    {
+      "Name": "C3OUT",
+      "Position": 2,
+      "Length": 1,
+      "ValueDescription": {
+        "-1": "Shows the current output of Comparator 3 (CM3CON[8])"
+      }
+    },
+    {
+      "Name": "C2OUT",
+      "Position": 1,
+      "Length": 1,
+      "ValueDescription": {
+        "-1": "Shows the current output of Comparator 2 (CM2CON[8])"
+      }
+    },
+    {
+      "Name": "C1OUT",
+      "Position": 0,
+      "Length": 1,
+      "ValueDescription": {
+        "-1": "Shows the current output of Comparator 1 (CM1CON[8])"
+      }
+    }
+  ]
+}

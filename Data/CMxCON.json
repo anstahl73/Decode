@@ -1,0 +1,78 @@
+{
+  "Name": "Comparator Control Register",
+  "fields": [
+    {
+      "Name": "ON",
+      "Position": 15,
+      "Length": 1,
+      "ValueDescription": {
+        "0": "Comparator disabled",
+        "1": "Comparator enabled"
+      }
+    },
+  	{
+	    "Name": "COE",
+	    "Position": 14,
+	    "Length": 1,
+	    "ValueDescription": {
+		  "0": "Comparator output is internal only",
+		  "1": "Comparator output is present on the CxOUT pin"
+	    }
+	  },
+    {
+      "Name": "CPOL",
+      "Position": 13,
+      "Length": 1,
+      "ValueDescription": {
+        "0": "Comparator output is not inverted",
+        "1": "Comparator output is inverted"
+      }
+    },
+    {
+      "Name": "CEVT",
+      "Position": 9,
+      "Length": 1,
+      "ValueDescription": {
+        "0": "Comparator event has not occured",
+        "1": "Comparator event that is defined by EVPOL[1:0] has occured; subsequent triggers and interrupts are disabled until the bit is cleared"
+      }
+    },
+    {
+      "Name": "COUT",
+      "Position": 8,
+      "Length": 1,
+      "ValueDescription": {
+        "0": "Comparator output bit",
+        "1": "Comparator output bit"
+      }
+    },
+    {
+      "Name": "EVPOL",
+      "Position": 6,
+      "Length": 2,
+      "ValueDescription": {
+        "-1": "Trigger/Event/Interrupt Polarity Select bits",
+      }
+    },
+    {
+      "Name": "CREF",
+      "Position": 4,
+      "Length": 1,
+      "ValueDescription": {
+        "0": "Non-inverting input connects to the CxINA pin",
+        "1": "Non-inverting input connects to the internal reference defined by CVREFSEL bit in CMSTAT register"
+      }
+    },
+    {
+      "Name": "CCH",
+      "Position": 0,
+      "Length": 2,
+      "ValueDescription": {
+        "0": "Inverting input of the comparator connects to the band gap reference voltage",
+        "1": "Inverting input of the comparator connects to the CxIND pin",
+        "2": "Inverting input of the comparator connects to the CxINC pin",
+        "3": "Inverting input of the comparator connects to the CxINB pin"
+      }
+    }
+  ]
+}
