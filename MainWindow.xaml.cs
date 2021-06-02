@@ -95,19 +95,20 @@ namespace Decode
             if (dec != null)
             {
                 List<int> cluster = new List<int>();
-                int pos = 0;
+                int pos = 32;
                 tbDecode.Text = "";
                 foreach (DecodingField f in dec)
                 {
-                    if (pos < f.Position)
-                        cluster.Add(f.Position - pos);
+                    if (pos > f.Position + f.Length)
+                    {
+                        cluster.Add(pos - (f.Position + f.Length));
+                    }
                     cluster.Add(f.Length);
-                    pos = f.Position + f.Length;
+                    pos = f.Position;
                     tbDecode.Text += Range(f) + f.Decode(current_value) + Environment.NewLine;
                 }
-                if (pos < 32)
-                    cluster.Add(32 - pos);
-                cluster.Reverse();
+                if (pos > 0)
+                    cluster.Add(pos);
                 binFrame.Cluster = cluster;
             }
         }
